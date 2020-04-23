@@ -41,7 +41,7 @@ jobs:
       run: |
         export PYTHONPATH=$PWD:$PYTHONPATH
         pip install pylint
-        pylint official/vision --rcfile=.pylintrc || pylint_ret=$?
+        pylint official --rcfile=.pylintrc || pylint_ret=$?
         echo test, and deploy your project.
         if [ "$pylint_ret" ]; then
           exit $pylint_ret
